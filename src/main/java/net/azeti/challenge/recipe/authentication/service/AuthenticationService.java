@@ -47,7 +47,6 @@ public class AuthenticationService {
                 )
         );
         var user = repository.findByEmail(request.getEmail())
-                //TODO: correct
                 .orElseThrow(() -> new UsernameNotFoundException("email not found"));
         var jwtToken = jwtService.generateToken(user);
         saveUserToken(user, jwtToken);

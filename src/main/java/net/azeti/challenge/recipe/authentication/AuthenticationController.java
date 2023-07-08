@@ -25,7 +25,6 @@ public class AuthenticationController {
         return ResponseEntity.ok(service.register(request));
     }
 
-    //TODO: what is the differnce with spring login
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> login(
             @RequestBody AuthenticationRequest request) {

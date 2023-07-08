@@ -14,7 +14,6 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//TODO: create DTO
 public class Recipe {
 
     @Id
@@ -25,12 +24,9 @@ public class Recipe {
     @Size(max = 200, message = "Title cannot be more than 200 characters")
     private String title;
 
-    //TODO: should this be the user that is loggedIn?
-    //TODO: then it is nullable
     private String username;
     private String description;
 
-    //TODO is this mandatory
     @NotEmpty(message = "At least one ingredient is required")
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Ingredient> ingredients;

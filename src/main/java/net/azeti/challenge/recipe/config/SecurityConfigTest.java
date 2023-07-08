@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Profile("test")
 @Configuration
-//TODO: deprecate
 public class SecurityConfigTest extends WebSecurityConfigurerAdapter {
 
     @Override

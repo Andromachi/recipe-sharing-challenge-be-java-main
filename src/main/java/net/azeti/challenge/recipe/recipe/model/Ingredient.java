@@ -2,7 +2,6 @@ package net.azeti.challenge.recipe.recipe.model;
 
 import lombok.*;
 
-//TODO: not star
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

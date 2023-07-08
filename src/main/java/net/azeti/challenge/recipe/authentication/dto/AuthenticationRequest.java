@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-//TODO: check anotation
 public class AuthenticationRequest {
     private String email;
     private String password;

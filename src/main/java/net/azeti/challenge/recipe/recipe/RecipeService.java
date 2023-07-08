@@ -45,7 +45,6 @@ public class RecipeService {
                     recipe.setDescription(newRecipe.getDescription());
                     recipe.setIngredients(newRecipe.getIngredients());
                     recipe.setInstructions(newRecipe.getInstructions());
-                    //TODO: this can give null pointer
                     recipe.setServings(newRecipe.getServings());
                     return recipeRepository.save(recipe);
                 })

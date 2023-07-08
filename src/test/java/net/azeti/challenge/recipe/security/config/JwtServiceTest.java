@@ -1,7 +1,5 @@
 package net.azeti.challenge.recipe.security.config;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import net.azeti.challenge.recipe.authentication.service.JwtService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,9 +9,11 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-import static org.mockito.Mockito.*;
 
-//TODO: fix
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class JwtServiceTest {
 
     private JwtService jwtService;

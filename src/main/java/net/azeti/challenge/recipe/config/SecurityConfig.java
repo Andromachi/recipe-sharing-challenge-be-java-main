@@ -20,7 +20,6 @@ public class SecurityConfig {
     private final JwtAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
 
-    //TODO: how does it know to come here
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         //Disabled in order to use h2 console
@@ -42,10 +41,6 @@ public class SecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authenticationProvider(authenticationProvider)
-                //TODO: what is UsernamePasswordAuthenticationFilter.class
-                //TODO: And Also could you use keycloak or soemthing
-                //TODO: should have used basic auth, write it in an email or documentation
-                // that it's an overkill and useless
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }

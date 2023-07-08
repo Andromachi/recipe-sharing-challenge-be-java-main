@@ -1,10 +1,10 @@
 package net.azeti.challenge.recipe.recipe;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.azeti.challenge.recipe.authentication.JwtAuthenticationFilter;
 import net.azeti.challenge.recipe.recipe.model.Ingredient;
 import net.azeti.challenge.recipe.recipe.model.IngredientUnit;
 import net.azeti.challenge.recipe.recipe.model.Recipe;
-import net.azeti.challenge.recipe.authentication.JwtAuthenticationFilter;
 import net.azeti.challenge.recipe.weather.WeatherService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,17 +16,18 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-//TODO: check this
 @WebMvcTest(value = RecipeController.class, excludeFilters = {@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = JwtAuthenticationFilter.class)})
 @ActiveProfiles("test")
 class RecipeControllerTest {

@@ -10,12 +10,10 @@ import net.azeti.challenge.recipe.authentication.model.Role;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-//TODO: check anotation
 public class RegisterRequest {
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-    //TODO remove
     private Role role;
 }

@@ -1,7 +1,6 @@
 package net.azeti.challenge.recipe.recipe.model;
 
 public enum IngredientUnit {
-    //TODO: maybe make it lowercase
     G("Gram"),
     KG("Kilogram"),
     ML("Milliliter"),
