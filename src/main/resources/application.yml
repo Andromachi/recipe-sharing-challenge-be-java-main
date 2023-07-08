@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+springdoc:
+  packages-to-scan: net.azeti.challenge.recipe
+  paths-to-match: /api/v1/**
+
+openweathermap:
+  api:
+    key: b9a1da55c6a2e4a089e0c13417823308
+
+
+security:
+  jwt:
+    token:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
